@@ -22,13 +22,13 @@ app.use((req, res, next) => {
 
 app.get("/api/flights", async (req, res) => {
     try {
-        let response = await fetch("https://opensky-network.org/api/states/all");
+        let response = await axios.get("https://opensky-network.org/api/states/all");
         // let response = await fetch("https://countriesnow.space/api/v0.1/countries/positions");
 
-        response = await response.json();
+        // response = await response.json();
 
         res.json({
-            data: response
+            data: response.data
         });
 
     } catch (err) {
