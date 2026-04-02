@@ -19,7 +19,8 @@ app.get("/api/flights", async (req, res) => {
         });
 
     } catch (err) {
-        res.status(500).json({ error: "Failed" });
+        console.error("Flight API Error:", err.message);
+        res.status(500).json({ error: "Failed",details: err.message });
     }
 });
 
