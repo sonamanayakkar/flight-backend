@@ -27,7 +27,7 @@ app.get("/api/flights", async (req, res) => {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
                 },
-                timeout: 5000
+                timeout: 15000
             }
         );
         // let response = await fetch("https://countriesnow.space/api/v0.1/countries/positions");
